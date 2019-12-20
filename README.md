@@ -65,3 +65,16 @@
            </com.jac.estatusbar.statusbar.StatusBarHeightView>
 
     </RelativeLayout>
+
+
+    //需要注意的问题,(如果出现:app:processDebugManifest错误,需要把module中app下的build.gradle中支持的版本号改成和项目中版本号一致)
+    //库里的最低版本19,最高版本28.项目中需要改成相同版本
+    android {
+        compileSdkVersion 28
+        buildToolsVersion "29.0.2"
+        defaultConfig {
+            applicationId "com.xxx"
+            minSdkVersion 19
+            targetSdkVersion 28
+    		}
+    	}
