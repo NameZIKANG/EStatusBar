@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-           <com.jac.estatusbar.statusbar.StatusBarHeightView
+           <com.sdx.statusbar.statusbar.StatusBarHeightView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -62,7 +62,7 @@
             	...
             	//布局文件
             	...
-           </com.jac.estatusbar.statusbar.StatusBarHeightView>
+           </com.sdx.statusbar.statusbar.StatusBarHeightView>
 
     </RelativeLayout>
 
