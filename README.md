@@ -16,7 +16,7 @@
 
 	//app的build.gradle添加
     dependencies {
-	       implementation 'com.github.NameZIKANG:EStatusBar:1.0.0'
+	       implementation 'com.github.NameZIKANG:EStatusBar:1.0.2'
 	}
 
        在setContentView之后调用下面的方法:
