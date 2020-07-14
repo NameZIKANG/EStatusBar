@@ -10,13 +10,13 @@
     allprojects {
 		repositories {
 			...
-			maven { url 'https://jitpack.io' }
+###			maven { url 'https://jitpack.io' }
 		}
 	}
 
 	//app的build.gradle添加
     dependencies {
-	       implementation 'com.github.NameZIKANG:EStatusBar:1.0.3'
+###	       implementation 'com.github.NameZIKANG:EStatusBar:1.0.3'
 	}
 
        在setContentView之后调用下面的方法:
@@ -26,7 +26,7 @@
      * @param activity    上下文
      * @param isPadding   是否添加状态栏
      * @param isTextColor 状态栏字体颜色切换(true为浅色,false为深色)
-     * @param colorId     状态栏背景色设置(设置为1会默认白色)
+     * @param colorId     状态栏背景色设置(设置为1会默认白色,或者自己设置颜色,例如:   Color.parseColor("#2b85e4")   )
      */
      StatusBarUtil.setStutatusBar(this, true, true, 1);
 
@@ -69,6 +69,7 @@
 
     //需要注意的问题,(如果出现:app:processDebugManifest错误,需要把module中app下的build.gradle中支持的版本号改成和项目中版本号一致)
     //库里的最低版本19,最高版本28.项目中需要改成相同版本
+    //或者下载源码,把本项目的版本改成与你项目一致就好
     android {
         compileSdkVersion 28
         buildToolsVersion "29.0.2"
