@@ -33,6 +33,7 @@ public class StatusBarUtil {
 
     /**
      * 设置沉浸式
+     *
      * @param activity    上下文
      * @param isPadding   是否添加状态栏
      * @param isTextColor 状态栏字体颜色切换(true为浅色,false为深色)
@@ -53,6 +54,7 @@ public class StatusBarUtil {
 
     /**
      * 图片背景设置沉浸式
+     *
      * @param activity    上下文
      * @param isTextColor 状态栏字体颜色切换(false为浅色,true为深色)
      */
@@ -125,6 +127,8 @@ public class StatusBarUtil {
                     rootView.setFitsSystemWindows(fitSystemWindows);
                 }
             }
+            // 设置顶部状态栏透明
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
     }
 

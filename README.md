@@ -67,7 +67,12 @@
     </RelativeLayout>
 
 
-    //需要注意的问题,(如果出现:app:processDebugManifest错误,需要把module中app下的build.gradle中支持的版本号改成和项目中版本号一致)
+    //需要注意的问题 1 (如果图片背景设置未生效，请在 StatusBarUtil.setImageStutatusBar(this, false); 方法后面加上状态栏透明)
+
+    // 设置顶部状态栏透明
+     activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+    //需要注意的问题 2 (如果出现:app:processDebugManifest错误,需要把module中app下的build.gradle中支持的版本号改成和项目中版本号一致)
     //库里的最低版本19,最高版本28.项目中需要改成相同版本
     //或者下载源码,把本项目的版本改成与你项目一致就好
     android {
